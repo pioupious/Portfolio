@@ -6,8 +6,6 @@
 
 **Site en ligne :** [https://pioupious.github.io/Portfolio/](#)
 
-> Remplacez `#` par l’URL publique du portfolio une fois le site déployé.
-
 ## ✨ À propos
 
 Ce portfolio présente le parcours de Pierre Cancalon, de ses expériences en 3D et en effets visuels à sa reconversion vers la cybersécurité. Il rassemble ses compétences, ses expériences professionnelles, ses formations et quelques projets dans une interface inspirée des archives de science-fiction.
