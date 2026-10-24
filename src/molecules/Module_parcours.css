@@ -1,0 +1,107 @@
+.molecule-experience {
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 14px 8px;
+  border-bottom: 1px solid var(--color-surface-bright);
+}
+
+.molecule-experience-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.molecule-experience-toggle:focus-visible {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 4px;
+}
+
+.molecule-experience-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex: 1;
+  gap: 6px 10px;
+}
+
+.molecule-experience-number,
+.molecule-experience-sector {
+  font-family: var(--font-family-label);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+.molecule-experience-title {
+  color: var(--color-secondary);
+  font-family: var(--font-family-headline);
+  font-size: 0.8rem;
+}
+
+.molecule-experience-date {
+  margin-left: auto;
+  color: var(--color-outline);
+  font-family: var(--font-family-label);
+  font-size: 0.65rem;
+}
+
+.molecule-experience-indicator {
+  color: var(--color-primary-container);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.molecule-experience > p {
+  margin: 6px 0 0 14px;
+}
+
+.molecule-experience-details {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 2px 14px;
+  padding: 12px 14px;
+  border-left: 2px solid var(--color-primary-container);
+  background-color: var(--surface-glass);
+  color: var(--color-on-surface-variant);
+  font-family: var(--font-family-body);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.molecule-experience-details p,
+.molecule-experience-details h3,
+.molecule-experience-details ul {
+  margin: 0;
+}
+
+.molecule-experience-details h3 {
+  color: var(--color-primary);
+  font-family: var(--font-family-headline);
+  font-size: 0.75rem;
+}
+
+.molecule-experience-details ul {
+  display: grid;
+  gap: 4px;
+  padding-left: 18px;
+}
+
+.molecule-experience-details strong {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 767px) {
+  .molecule-experience-date {
+    width: 100%;
+    margin-left: 0;
+  }
+}

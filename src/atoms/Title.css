@@ -1,0 +1,20 @@
+.title-1 {
+  color: var(--color-secondary);
+  text-shadow: 0.1rem 0.1rem 2rem var(--color-on-primary-fixed-variant);
+}
+
+.title-2- {
+  font-family: var(--font-family-headline);
+  font-size: 28px;
+}
+
+.title-3 {
+  font-family: var(--font-family-headline);
+  font-size: 20px;
+  color: var(--secondary);
+}
+
+.atom-title {
+  box-sizing: border-box;
+  margin: 0;
+}

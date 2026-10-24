@@ -1,0 +1,9 @@
+.atom-point {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--color-primary-container) 84%, transparent);
+  box-shadow: 0 0 8px var(--color-primary-container);
+}

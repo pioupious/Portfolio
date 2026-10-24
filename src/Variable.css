@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Sora:wght@700&family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+  --color-surface-bright: #37374e;
+  --color-surface-container-low: #19192f;
+  --color-surface-container: #1d1d33;
+  --color-surface-tint: #ffb1c0;
+  --color-on-surface: #e2e0fd;
+  --color-on-surface-variant: #e4bdc3;
+  --color-background: #111126;
+  --color-on-background: #e2e0fd;
+  --color-outline: #ab888e;
+  --color-primary: #ffb1c0;
+  --color-primary-container: #ff4c83;
+  --color-on-primary-container: #5a0023;
+  --color-inverse-primary: #bc0051;
+  --color-on-primary-fixed-variant: #90003d;
+  --color-secondary: #ffffff;
+  --color-secondary-fixed-dim: #00e0b3;
+  --color-error: #ffb4ab;
+  --font-family-headline: 'Sora', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
+  --font-family-label: 'Space Grotesk', sans-serif;
+  --font-body-md-size: 16px;
+  --font-body-md-weight: 400;
+  --font-body-md-line-height: 24px;
+  --glow-primary: 0 0 12px rgba(255, 76, 131, 0.4);
+}
+
+.affichage {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-family-body);
+  font-size: var(--font-body-md-size);
+  font-weight: var(--font-body-md-weight);
+  line-height: var(--font-body-md-line-height);
+}
+
+.TexteBody {
+  font-family: var(--font-family-label);
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+
+.pink {
+  color: var(--color-surface-tint);
+}
+
+.white {
+  color: var(--color-secondary);
+}
+
+.gray {
+  color: var(--color-on-surface);
+}
+
+
+.brown {
+  color: var(--color-outline);
+}
+
+.maganta {
+  color: var(--color-primary-container);
+}
+
+.cyan {
+  color: var(--color-secondary-fixed-dim);
+}
+
+.large {
+  text-transform: uppercase;
+  font-family: var(--font-family-label);
+  font-size: 1rem;
+}
+
+.medium {
+  font-size: 0.8rem;
+  font-family: var(--font-family-headline);
+}
+
+.standar {
+  font-size: 0.7rem;
+  font-family: var(--font-family-body);
+}
+
+.small-title {
+  font-size: 0.7rem;
+  font-family: var(--font-family-headline);
+}
+
+.small {
+  font-size: 0.6rem;
+  font-family: var(--font-family-body);
+}

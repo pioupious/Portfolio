@@ -62,6 +62,14 @@ npm run preview
 
 La commande `build` génère le site dans le dossier `dist/`. `preview` permet de vérifier localement cette version de production.
 
+### Déploiement sur GitHub Pages
+
+```bash
+npm run deploy
+```
+
+Cette commande génère le site puis publie le contenu de `dist/` sur la branche `gh-pages`.
+
 ## 📁 Organisation du projet
 
 ```text

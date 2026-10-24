@@ -1,0 +1,100 @@
+.atom-rovers {
+  /* Positionné par React en coordonnées écran et placé au-dessus du décor. */
+  position: fixed;
+  z-index: 5;
+  /* Le rover décoratif ne doit pas intercepter le scroll ni les clics. */
+  pointer-events: none;
+}
+
+.atom-rovers-rotor {
+  /* Calque tournant autour du point aligné sur la roue arrière. */
+  position: absolute;
+  /* Ces décalages et le pivot sont calibrés sur l'image source du rover. */
+  left: -138%;
+  top: -92.7%;
+  width: 100%;
+  height: 100%;
+  transform-origin: 155% 70%;
+  /* L'angle vient du segment du trajet calculé dans Rovers.jsx. */
+  transform: rotate(var(--rover-angle));
+}
+
+.atom-rovers-body {
+  position: relative;
+  z-index: 1;
+  /* L'image dépasse du conteneur pour rester alignée sur le pivot décalé. */
+  display: block;
+  width: 250%;
+  height: 135%;
+  /* Conserve le ratio du PNG et évite de sélectionner l'image. */
+  object-fit: contain;
+  user-select: none;
+}
+
+.atom-rovers-dust {
+  position: absolute;
+  /* Emplacement vertical réglé pour placer le panache au contact du sol. */
+  top: calc(75% + 20px);
+  z-index: 0;
+  width: 80px;
+  height: 80px;
+  /* L'image de frame, l'opacité et la direction sont fournies par React. */
+  background: var(--dust-frame) 0 0 / contain no-repeat;
+  /* Décale le panache, le remonte sous la roue et le retourne au recul. */
+  transform: translate(var(--dust-offset-x), -88%) scaleX(var(--dust-direction));
+  opacity: var(--dust-opacity);
+  transition: opacity 120ms ease-out;
+}
+
+.atom-rovers-dust-back {
+  /* Place la poussière derrière la roue arrière. */
+  left: calc(130% + 25px);
+}
+
+.atom-rovers-wheel {
+  position: absolute;
+  /* Les roues se superposent aux roues peintes sur l'image du rover. */
+  top: 75%;
+  z-index: 2;
+  width: 25%;
+  aspect-ratio: 1;
+  /* Découpe l'image de roue dans un cercle. */
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* Positions calibrées des roues avant, intermédiaire et arrière. */
+.atom-rovers-wheel-front {
+  left: 75%;
+}
+
+.atom-rovers-wheel-third {
+  left: 155%;
+}
+
+.atom-rovers-wheel-back {
+  left: 130%;
+}
+
+.atom-rovers-wheel img {
+  display: block;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  /* Le nombre de degrés est transmis par React selon le scroll. */
+  transform: rotate(var(--wheel-rotation));
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  .atom-rovers {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atom-rovers-dust {
+    /* Supprime la transition de fondu pour respecter la préférence système. */
+    transition: none;
+  }
+}

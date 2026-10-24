@@ -1,0 +1,41 @@
+.contact-pierre {
+  display: flex;
+  width: calc(100% - 32px);
+  max-width: var(--content-max-width);
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 28px auto 0;
+  text-align: center;
+}
+
+#photo-pierre {
+  box-sizing: border-box;
+  width: 200px;
+  aspect-ratio: 1;
+  border: 2px solid var(--color-primary-container);
+  border-radius: 50%;
+  background-color: var(--color-surface-container);
+  box-shadow: var(--glow-primary);
+  object-fit: cover;
+  object-position: center;
+ 
+}
+
+#text-contact {
+  display: inline-block;
+  max-width: 180px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+   padding-top: 15px;
+}
+
+#text-contact:hover {
+  transform: scale(1.08);
+}
+
+@media (max-width: 767px) {
+  #photo-pierre {
+    width: 200px;
+  }
+}

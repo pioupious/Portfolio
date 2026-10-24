@@ -1,0 +1,70 @@
+:root {
+  --content-max-width: 720px;
+  --surface-glass: color-mix(in srgb, var(--color-surface-container-low) 82%, transparent);
+  --surface-glass-strong: color-mix(in srgb, var(--color-surface-container) 88%, transparent);
+  --page-panel: color-mix(in srgb, var(--color-background) 90%, transparent);
+}
+
+body {
+  margin: 0;
+}
+
+#page-main {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: var(--color-background);
+  background-image:
+    linear-gradient(rgba(255, 2, 247, 0.1), rgba(255, 2, 247, 0)),
+    url("./assets/Fond_Planette.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--color-on-background);
+}
+
+.page-shell {
+  width: min(100%, 1300px);
+  height: calc(100vh - 65px);
+  margin: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  background-color: var(--page-panel);
+  border-radius: 2rem;
+}
+
+.page-shell::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --content-max-width: min(80vw, 900px);
+  }
+
+  .page-shell {
+    width: min(calc(100% - clamp(96px, 12vw, 240px)), 1300px);
+    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
+    margin: 0 auto 48px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page-shell {
+    width: calc(100% - 128px);
+    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
+    margin: 0 auto 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-shell {
+    width: calc(100% - 40px);
+    height: calc(100dvh - 20px);
+    margin: 0 auto 48px;
+    border-radius: 1.5rem;
+  }
+}

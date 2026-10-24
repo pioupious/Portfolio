@@ -1,0 +1,30 @@
+.module-skill {
+    box-sizing: border-box;
+    border: 1px solid var(--color-surface-bright);
+    border-radius: 5px;
+    width: 100%;
+    padding: 1rem 1.5rem 1rem;
+    background-color: var(--surface-glass);
+    text-align: center;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.module-skill:hover {
+    transform: scale(1.03);
+    box-shadow: var(--glow-primary);
+}
+
+.title-skill {
+    border-bottom: 1px solid var(--color-surface-bright);
+    padding-bottom: 0.8rem;
+}
+.content-skill {
+    padding-top: 0.2rem;
+    line-height: 1.2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .module-skill {
+        transition: none;
+    }
+}

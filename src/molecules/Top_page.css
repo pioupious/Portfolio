@@ -1,0 +1,100 @@
+#divtop {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 20px 10px 10px;
+  border-bottom: 1px solid var(--color-on-primary-container);
+}
+
+#divtop > p {
+  margin: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+#toptext {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: var(--glow-primary);
+}
+
+#topslash {
+  letter-spacing: 0.08em;
+}
+
+#navtop {
+  display: flex;
+  margin-left: auto;
+}
+
+#ultop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#navtop a {
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+#navtop a:hover {
+  color: var(--color-primary-container);
+  text-shadow: var(--glow-primary);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #divtop {
+    flex-wrap: wrap;
+  }
+
+  #navtop {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 767px) {
+  #divtop {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px 12px 10px;
+  }
+
+  #divtop > p {
+    white-space: normal;
+  }
+
+  #navtop {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  #ultop {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+
+  .molecule-nav-link {
+    padding: 0.35rem;
+  }
+}
+
+@media (max-width: 520px) {
+  #ultop {
+    flex-wrap: nowrap;
+    gap: 2px;
+  }
+
+  #navtop .molecule-nav-link {
+    padding: 0.25rem;
+    font-size: 0.55rem;
+  }
+}

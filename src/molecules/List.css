@@ -1,0 +1,8 @@
+.molecule-nav-link {
+  padding: 0.5rem;
+  text-decoration: none;
+}
+.molecule-nav-link:hover {
+  text-shadow: 0.05rem 0.05rem 1rem var(--color-primary-container);
+}
+
