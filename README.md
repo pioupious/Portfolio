@@ -4,7 +4,7 @@
 
 ## 🌐 Accès au site
 
-**Site en ligne :** [Lien à ajouter après le déploiement](#)
+**Site en ligne :** [https://pioupious.github.io/Portfolio/](#)
 
 > Remplacez `#` par l’URL publique du portfolio une fois le site déployé.
 
